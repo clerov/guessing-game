@@ -1,0 +1,19 @@
+use rand::Rng;
+use std::io;
+use std::cmp::Odering;
+
+fn main() {
+    println!("Welcome to Guessing Game!");
+    println!("Enter the guessed number: ");
+
+    let mut guess = String::new();
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Unable to readline");
+
+    println!("You guessed {guess}");
+    match guess.cmp(&secret_number){
+    	Ordering::Less => println!("Too Low");
+    	Ordering::Equal => println!("You won")
+    }
+}

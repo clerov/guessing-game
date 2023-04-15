@@ -1,0 +1,11 @@
+use std::io;
+
+fn main() {
+    println!("Welcome to Guessing Game!");
+    println!("Enter the guessed number: ");
+
+    let num = String::new;
+    io::stdin()
+        .read(&mut num)
+        .except("Unable to readli")
+}
